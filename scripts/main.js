@@ -1,1 +1,0 @@
-console.log("Portfólio Josemar Brito carregado com sucesso!");

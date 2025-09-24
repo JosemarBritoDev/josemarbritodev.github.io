@@ -1,147 +1,408 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Josemar Brito</title>
-  <link rel="stylesheet" href="style/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josemar Brito - Desenvolvedor de Tecnologia</title>
+    <meta name="description" content="Portfólio de Josemar Brito - Desenvolvedor especializado em soluções tecnológicas e suporte técnico em TI">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Josemar Brito</h1>
-      <p>Desenvolvedor Backend • Fundador da BritosCode Tecnologia</p>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#tecnologias">Tecnologias</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-  <section id="sobre" class="container">
-    <h2>Sobre mim</h2>
-    <p>Sou apaixonado por tecnologia, automações e soluções criativas. Fundador da BritosCode Tecnologia, ajudo empresas a evoluírem digitalmente com sistemas sob medida. Curioso por natureza, estou sempre explorando novas stacks e ferramentas.</p>
-  </section>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">JB</a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#stack" class="nav-link">Stack</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#education" class="nav-link">Formação</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+         
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="assets/images/minhaFoto.jpg" alt="Josemar Brito" class="profile-img">
+                    <div class="image-glow"></div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="greeting">Olá, eu sou</span>
+                    <span class="name">Josemar Brito</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="specialty">Especialista em Suporte Técnico & Desenvolvimento</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#stack" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        Stack Tecnológico
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-laptop-code"></i>
+                        Projetos
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contato
+                    </a>
+                    <a href="#education" class="btn btn-secondary">
+                        <i class="fas fa-graduation-cap"></i>
+                        Formação
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/josemarbritodev" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/josemarbrito" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:josemarbrito@pm.me" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="Scroll">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll para explorar</span>
+        </div>
+    </section>
 
-  <section id="tecnologias" class="container">
-    <h2>Stacks que uso</h2>
-    <div class="badges">
-      <span class="badge python">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" />
-        Python
-      </span>
-      <span class="badge django">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/django.svg" alt="Django" />
-        Django
-      </span>
-      <span class="badge js">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript" />
-        JavaScript
-      </span>
-      <span class="badge node">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" alt="Node.js" />
-        Node.js
-      </span>
-      <span class="badge docker">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" />
-        Docker
-      </span>
-      <span class="badge git">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" alt="Git" />
-        Git
-      </span>
-      <span class="badge sql">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="PostgreSQL" />
-        PostgreSQL
-      </span>
-      <span class="badge html">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML5" />
-        HTML5
-      </span>
-      <span class="badge css">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" alt="CSS3" />
-        CSS3
-      </span>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Minha Jornada</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Sou um profissional apaixonado por tecnologia com experiência sólida em <strong>suporte técnico de TI</strong> e <strong>desenvolvimento de soluções tecnológicas</strong>. Minha jornada começou com a curiosidade sobre como as coisas funcionam e evoluiu para uma carreira dedicada a resolver problemas complexos e criar soluções inovadoras.
+                    </p>
+                    <p class="about-description">
+                        Ao longo dos anos, desenvolvi expertise em diversas tecnologias e metodologias, sempre focando em <strong>excelência no atendimento ao cliente</strong> e <strong>eficiência operacional</strong>. Minha abordagem combina conhecimento técnico profundo com habilidades de comunicação para entregar resultados que realmente fazem a diferença.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Projetos Concluídos</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="stat-number">100+</h3>
+                            <p class="stat-label">Clientes Atendidos</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="stat-number">3+</h3>
+                            <p class="stat-label">Anos de Experiência</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3 class="skills-title">Áreas de Especialização</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Suporte Técnico</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Infraestrutura de TI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Desenvolvimento</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Gestão de Dados</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Segurança Digital</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-users"></i>
+                            <span>Atendimento ao Cliente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="projetos" class="container">
-    <h2>Projetos em destaque</h2>
+    <!-- Stack Section -->
+    <section id="stack" class="stack">
+        <div class="container">
+            <h2 class="section-title">Stack Tecnológico</h2>
+            <div class="stack-content">
+                <div class="tech-category">
+                    <h3 class="category-title">Linguagens de Programação</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 class="category-title">Ferramentas & Plataformas</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Terminal</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 class="category-title">Especialidades em TI</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-server"></i>
+                            <span>Servidores</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Redes</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Hardware</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Computing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="projeto">
-      <span class="badge python">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" />
-        Python
-      </span>
-      <span class="badge django">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/django.svg" alt="Django" />
-        Django
-      </span>
-      <h3>CRM para clínica pet com Python e Django</h3>
-      <p>CRM para clínicas com controle de clientes, pets e funcionários</p>
-      <a href="https://github.com/JosemarBritoDev/clinica-pet" target="_blank">Ver no GitHub</a>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="Sistema de Gestão">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Gestão Empresarial</h3>
+                        <p class="project-description">
+                            Desenvolvimento de sistema completo para gestão de pequenas empresas de TI, incluindo CRM, controle de estoque e faturamento.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="projeto">
-      <span class="badge node">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" alt="Node.js" />
-        Node.js
-      </span>
-      <h3>Bot de WhatsApp com Node.js</h3>
-      <p>Bot que responde mensagens e executa comandos via WhatsApp.</p>
-      <a href="https://github.com/JosemarBritoDev/bot-whatsapp-node" target="_blank">Ver no GitHub</a>
-    </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" alt="Dashboard Monitoramento">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dashboard de Monitoramento</h3>
+                        <p class="project-description">
+                            Interface web para monitoramento em tempo real de sistemas e serviços de TI, com alertas automáticos e relatórios detalhados.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="projeto">
-      <span class="badge node">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" alt="Node.js" />
-        Node.js
-      </span>
-      <span class="badge js">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript" />
-        JavaScript
-      </span>
-      <h3>API de Consulta de CEP</h3>
-      <p>API REST para consulta de endereços via CEP usando Node.js e Express.</p>
-      <a href="https://github.com/JosemarBritoDev/api-consulta-cep" target="_blank">Ver no GitHub</a>
-    </div>
-  <section id="contato" class="container">
-  <h2>Contato</h2>
-  <div class="contatos">
-    <a class="contato" href="https://instagram.com/josemarbrito.dev" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
-      Instagram Pessoal
-    </a>
-    <a class="contato" href="https://instagram.com/britoscode" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
-      Instagram Profissional
-    </a>
-    <a class="contato" href="https://www.linkedin.com/in/josemarbrito" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
-      LinkedIn
-    </a>
-    <a class="contato" href="https://britoscode.com" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/internetexplorer.svg" alt="Site" />
-      Site BritosCode
-    </a>
-    <a class="contato" href="https://wa.me/5511966092994" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" />
-      WhatsApp
-    </a>
-    <a class="contato" href="mailto:josemarbrito@pm.me">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/protonmail.svg" alt="Email" />
-      josemarbrito@pm.me
-    </a>
-  </div>
-</section>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&h=300&fit=crop" alt="Automação de Processos">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automação de Processos</h3>
+                        <p class="project-description">
+                            Scripts e ferramentas para automação de tarefas repetitivas em ambiente corporativo, aumentando a eficiência operacional.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Shell Script</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Documentação
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-year">2022-2024</div>
+                    <div class="education-details">
+                        <h3 class="education-title">Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="education-institution">Faculdade Uni América | Descomplica</p>
+                        <p class="education-description">
+                            Curso superior focado em desenvolvimento de sistemas, redes de computadores, segurança da informação e gestão de projetos de TI.
+                        </p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-year">2021-2023</div>
+                    <div class="education-details">
+                        <h3 class="education-title">Certificações Técnicas</h3>
+                        <p class="education-institution">Diversas Instituições</p>
+                        <p class="education-description">
+                            Múltiplas certificações em suporte técnico, redes, segurança digital e metodologias ágeis de desenvolvimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Josemar Brito • Desenvolvido com 💻 e ☕</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Entre em Contato</h3>
+                    <p class="contact-description">
+                        Estou sempre aberto a novos desafios e oportunidades. Vamos conversar sobre como posso ajudar seu projeto ou empresa.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>estudos.josemarbrito@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ferraz de Vasconcelos, SP</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Disponível para projetos</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/josemarbritodev" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/josemarbrito" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:josemarbrito@pm.me.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nome</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Mensagem</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <script src="scripts/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Josemar Brito. Todos os direitos reservados.</p>
+                <p>Desenvolvido com muito ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
