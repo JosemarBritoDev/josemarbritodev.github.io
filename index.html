@@ -1,432 +1,216 @@
 <!DOCTYPE html>
-<HTML língua="pt-BR">
-<cabeça>
-    <meta conjunto de caracteres="UTF-8">
-    <meta nome="janela de visualização" conteúdo="largura=largura do dispositivo, escala inicial=1,0">
-    <link relação="ícone" href="ativos/imagens/favicon.png" tipo="imagem/png">
-    <título>Josemar Brito - Desenvolvedor de Tecnologia</título>
-    <meta nome="descrição" conteúdo="Portfólio de Josemar Brito - Desenvolvedor especializado em soluções tecnológicas e suporte técnico em TI">
-    <link relação="folha de estilo" href="estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&exibir=trocarte" relação="folha de estilo">
-    <link relação="folha de estilo" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</caboça>
-<corpo>
-    <dividir classe="cursor"></dividir>
-    <dividir classe="seguidor-cursor"></dividir>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Nome | Portfólio Profissional</title>
+  <meta name="description" content="Portfólio profissional com currículo, experiências, certificados e projetos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="brand">JB</a>
 
-    <!-- Navegação -->
-    <navegação classe="barra de navegação">
-        <dividir classe="contêiner de navegação">
-            <a href="#home" classe="logotipo de navegação">JB</a>
-            <dividir classe="menu de navegação">
-                <a href="#home" classe="link de navegação">Início</a>
-                <a href="#about" classe="link de navegação">Sobre</a>
-                <a href="#stack" classe="link de navegação">Pilha</a>
-                <a href="#projects" classe="link de navegação">Projetos</a>
-                <a href="#education" classe="link de navegação">Formação</a>
-                <a href="#contact" classe="link de navegação">Contato</a>
-            </dividir>
-            <dividir classe="hambúrguer">
-                <extensão></extensão>
-                <extensão></extensão>
-                <extensão></extensão>
-            </dividir>
-        </dividir>
-    </navegação>
-         
-    <!-- Seção Herói -->
-    <sessão id="casa" classe="herói">
-        <dividir classe="contêiner de herói">
-            <dividir classe="conteúdo de herói">
-                <dividir classe="imagem de herói">
-                    <imagem fonte="ativos/imagens/minhaFoto.jpg" alt="Josemar Brito" classe="perfil-img">
-                    <dividir classe="brilho de imagem"></dividir>
-                </dividir>
-                <h1 classe="tículo-de-herói">
-                    <extensão classe="saudação">Olá, eu sou</extensão>
-                    <extensão classe="nome">Josemar Brito</extensão>
-                </h1>
-                <p class="hero-subtitle">
-                    <span class="specialty">Especialista em Suporte Técnico & Desenvolvimento</span>
-                </p>
-                <div class="hero-buttons">
-                    <a href="#stack" class="btn btn-primary">
-                        <i class="fas fa-code"></i>
-                        Stack Tecnológico
-                    </a>
-                    <a href="#projects" class="btn btn-secondary">
-                        <i class="fas fa-laptop-code"></i>
-                        Projetos
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Contato
-                    </a>
-                    <a href="#education" class="btn btn-secondary">
-                        <i class="fas fa-graduation-cap"></i>
-                        Formação
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/josemarbritodev" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/josemarbrito" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:josemarbrito@pm.me" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#experiencias">Experiências</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="tag">Portfólio Profissional</span>
+        <h1>Seu Nome Completo</h1>
+        <p class="role">Analista de Redes | Infraestrutura | Suporte Técnico</p>
+        <p class="description">
+          Profissional de tecnologia com experiência em redes, infraestrutura,
+          suporte, virtualização e organização de ambientes corporativos.
+          Este espaço reúne minha trajetória, experiências, certificações e projetos.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contato" class="btn btn-primary">Entrar em contato</a>
+          <a href="#certificados" class="btn btn-secondary">Ver certificados</a>
         </div>
-        <div class="Scroll">
-            <div class="scroll-line"></div>
-            <span class="scroll-text">Scroll para explorar</span>
+      </div>
+
+      <div class="hero-card">
+        <h3>Resumo rápido</h3>
+        <ul>
+          <li>Experiência em redes e suporte</li>
+          <li>Organização de ambientes de TI</li>
+          <li>Estudos contínuos e certificações</li>
+          <li>Portfólio em constante atualização</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <span>Sobre mim</span>
+          <h2>Apresentação profissional</h2>
         </div>
+
+        <div class="card">
+          <p>
+            Aqui você vai escrever seu resumo profissional. Fale sobre sua experiência,
+            perfil técnico, áreas em que atua, principais conhecimentos e objetivos.
+            A ideia é que essa seção funcione como uma introdução parecida com o resumo do LinkedIn.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Sobre Minha Jornada</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        Sou um profissional apaixonado por tecnologia com experiência sólida em <strong>suporte técnico de TI</strong> e <strong>desenvolvimento de soluções tecnológicas</strong>. Minha jornada começou com a curiosidade sobre como as coisas funcionam e evoluiu para uma carreira dedicada a resolver problemas complexos e criar soluções inovadoras.
-                    </p>
-                    <p class="about-description">
-                        Ao longo dos anos, desenvolvi expertise em diversas tecnologias e metodologias, sempre focando em <strong>excelência no atendimento ao cliente</strong> e <strong>eficiência operacional</strong>. Minha abordagem combina conhecimento técnico profundo com habilidades de comunicação para entregar resultados que realmente fazem a diferença.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3 class="stat-number">8+</h3>
-                            <p class="stat-label">Projetos Concluídos</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="stat-number">20+</h3>
-                            <p class="stat-label">Clientes Atendidos</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="stat-number">3+</h3>
-                            <p class="stat-label">Anos de Experiência</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-skills">
-                    <h3 class="skills-title">Áreas de Especialização</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-tools"></i>
-                            <span>Suporte Técnico</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-network-wired"></i>
-                            <span>Infraestrutura de TI</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>Desenvolvimento</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>Gestão de Dados</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Segurança Digital</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-users"></i>
-                            <span>Atendimento ao Cliente</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section alt" id="experiencias">
+      <div class="container">
+        <div class="section-header">
+          <span>Carreira</span>
+          <h2>Experiências profissionais</h2>
         </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <h3>Analista de Redes</h3>
+              <span>Empresa Exemplo • 2023 - Atual</span>
+            </div>
+            <p>
+              Atuação com suporte de infraestrutura, configuração de rede,
+              troubleshooting, organização de equipamentos, monitoramento
+              e apoio a ambientes virtualizados.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <h3>Suporte Técnico</h3>
+              <span>Empresa Exemplo • 2021 - 2023</span>
+            </div>
+            <p>
+              Atendimento a usuários, configuração de sistemas,
+              manutenção de estações, apoio à conectividade e rotinas de TI.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Stack Section -->
-    <section id="stack" class="stack">
-        <div class="container">
-            <h2 class="section-title">Stack Tecnológico</h2>
-            <div class="stack-content">
-                <div class="tech-category">
-                    <h3 class="category-title">Linguagens de Programação</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="category-title">Ferramentas & Plataformas</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-terminal"></i>
-                            <span>Terminal</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-linux"></i>
-                            <span>Linux</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="category-title">Especialidades em TI</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fas fa-server"></i>
-                            <span>Servidores</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-network-wired"></i>
-                            <span>Redes</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-laptop"></i>
-                            <span>Hardware</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-cloud"></i>
-                            <span>Cloud Computing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section" id="certificados">
+      <div class="container">
+        <div class="section-header">
+          <span>Certificações</span>
+          <h2>Cursos e certificados</h2>
         </div>
+
+        <div class="cards-grid">
+          <article class="certificate-card">
+            <img src="assets/certificados/certificado1.jpg" alt="Certificado 1">
+            <div class="certificate-info">
+              <h3>Nome do Certificado</h3>
+              <p>Instituição emissora</p>
+              <span>Conclusão: 2025</span>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <img src="assets/certificados/certificado2.jpg" alt="Certificado 2">
+            <div class="certificate-info">
+              <h3>Nome do Certificado</h3>
+              <p>Instituição emissora</p>
+              <span>Conclusão: 2024</span>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <img src="assets/certificados/certificado3.jpg" alt="Certificado 3">
+            <div class="certificate-info">
+              <h3>Nome do Certificado</h3>
+              <p>Instituição emissora</p>
+              <span>Conclusão: 2024</span>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projetos em Destaque</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="Sistema de Gestão">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema de Gestão Empresarial</h3>
-                        <p class="project-description">
-                            Desenvolvimento de sistema completo para gestão de pequenas empresas de TI, incluindo CRM, controle de estoque e faturamento.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Código
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <section class="section alt" id="projetos">
+      <div class="container">
+        <div class="section-header">
+          <span>Portfólio</span>
+          <h2>Projetos e estudos</h2>
+        </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" alt="Dashboard Monitoramento">
-                    </dividir>
-                    <dividir classe="conteúdo do projeto">
-                        <h3 classe="título do projeto">Painel de Monitoramento</h3>
-                        <p classe="descrição do projeto">
- Interface web para monitoramento em tempo real de sistemas e serviços de TI, com alertas automáticos e relatórios detalhados.
-                        </p>
-                        <dividir classe="tecnologia de projeto">
-                            <extensão classe="etiqueta tecnológica">JavaScript</extensão>
-                            <extensão classe="etiqueta tecnológica">CSS3</extensão>
-                            <extensão classe="etiqueta tecnológica">APIs</extensão>
-                        </dividir>
-                        <dividir classe="links de projeto">
-                            <a href="#" classe="link do projeto">
-                                <i classe="fab fa-github"></i>
- Código
-                            </a>
-                            <a href="#" classe="link do projeto">
-                                <i classe="fas fa-link-externo-alt"></i>
- Demonstração
-                            </a>
-                        </dividir>
-                    </dividir>
-                </dividir>
+        <div class="cards-grid project-grid">
+          <article class="card">
+            <h3>Projeto 1</h3>
+            <p>
+              Descreva aqui um projeto, estudo, dashboard, laboratório,
+              automação ou atividade técnica relevante.
+            </p>
+          </article>
 
-                <dividir classe="cartão de projeto">
-                    <dividir classe="imagem do projeto">
-                        <imagem fonte="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&h=300&ajuste=cortar" alt="Automação de Processos">
-                    </dividir>
-                    <dividir classe="conteúdo do projeto">
-                        <h3 classe="título do projeto">Automação de Processos</h3>
-                        <p classe="descrição do projeto">
- Scripts e ferramentas para automação de tarefas repetitivas em ambiente corporativo, aumentando a eficiência operacional.
-                        </p>
-                        <dividir classe="tecnologia de projeto">
-                            <extensão classe="etiqueta tecnológica">Python</extensão>
-                            <extensão classe="etiqueta tecnológica">Script de shell</extensão>
-                            <extensão classe="etiqueta tecnológica">Git</extensão>
-                        </dividir>
-                        <dividir classe="links de projeto">
-                            <a href="#" classe="link do projeto">
-                                <i classe="fab fa-github"></i>
- Código
-                            </a>
-                            <a href="#" classe="link do projeto">
-                                <i classe="fas fa-link-externo-alt"></i>
- Documentação
-                            </a>
-                        </dividir>
-                    </dividir>
-                </dividir>
-            </dividir>
-        </dividir>
-    </seção>
+          <article class="card">
+            <h3>Projeto 2</h3>
+            <p>
+              Você pode usar esta parte para destacar experiências práticas,
+              labs, freelas, estudos guiados ou projetos acadêmicos.
+            </p>
+          </article>
 
-    <!-- Seção de Educação -->
-    <seção id="educação" classe="educação">
-        <dividir classe="contêiner">
-            <h2 classe="título da seção">Formação Acadêmica</h2>
-            <dividir classe="conteúdo educacional">
-                <dividir classe="item educacional">
-                    <dividir classe="ano educacional">2025-2025</dividir>
-                    <dividir classe="detalhes educacionais">
-                        <h3 classe="título educacional">Pós Graduação em Desenvolvimento Full Stack</h3>
-                        <p classe="instituição de educação">Faculdade Uni América | Descomplicado</p>
-                        <p classe="descrição educacional">
- Curso de Especialização focado no desenvolvimento de sistemas, backend, frontend, banco de dados, boas práticas e gestão de projetos de TI.
-                        </p>
-                    </dividir>
-                    <dividir classe="ano educacional">2024-2025</dividir>
-                    <dividir classe="detalhes educacionais">
-                        <h3 classe="tículo educacional">Pós Graduação em Redes e Ciberseguração </h3>
-                        <p classe="instituição de educação">Hackone (Em andamento)</p>
-                        <p classe="descrição educacional">
- Curso de Especialização focado em segurança da informação, redes de computadores, proteção de dados e gestão de riscos e documentação de redes em TI.
-                        </p>
- </dividir>
- </dividir>
-                <dividir classe="item educacional">
-                    <dividir classe="ano educacional">2022-2024</dividir>
-                    <dividir classe="detalhes educacionais">
-                        <h3 classe="tículo educacional">Análise e Desenvolvimento de Sistemas</h3>
-                        <p classe="instituição de educação">Faculdade Uni América | Descomplicado</p>
-                        <p classe="descrição educacional">
- Curso superior focado em desenvolvimento de sistemas, redes de computadores, segurança da informação e gestão de projetos de TI. </p>
-                    </dividir>
-                </dividir>
-                <dividir classe="item educacional">
-                    <dividir classe="ano educacional">2021-2025</dividir>
-                    <dividir classe="detalhes educacionais">
-                        <h3 classe="tículo educacional">Dezenas de Cursos Livres</h3>
-                        <p classe="instituição de educação">Udemy | DevPro | Dio.me | DLTec | ...</p>
-                        <p classe="descrição educacional">
- Diversos cursos online focados no desenvolvimento de sistemas, redes de computadores, segurança da informação e gestão de projetos de TI.
-                        </p>
- </dividir>
- </dividir>
-                
+          <article class="card">
+            <h3>Projeto 3</h3>
+            <p>
+              Esta seção ajuda a transformar o site em portfólio,
+              e não apenas em currículo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
- </dividir>
- </dividir>
- </sessão>
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-header">
+          <span>Contato</span>
+          <h2>Links profissionais</h2>
+        </div>
 
-    <!-- Seção de contato -->
-    <sessão id="contato" classe="contato">
-        <dividir classe="contêiner">
-            <h2 classe="tículo da seção">Vamos Trabalhar Juntos?</h2>
-            <dividir classe="conteúdo de contato">
-                <dividir classe="informações de contato">
-                    <h3 classe="subtítulo de contato">Entre em Contato</h3>
-                    <p classe="descrição de contato">
- Estou sempre aberto a novos desafios e oportunidades. Vamos conversar sobre como poder ajudar seu projeto ou empresa.
-                    </p>
-                    <dividir classe="detalhes de contato">
-                        <dividir classe="item de contato">
-                            <i classe="fas fa-envelope"></i>
-                            <extensão>\josemarbritosantos@gmail.com</extensão>
-                        </dividir>
-                        <dividir classe="item de contato">
-                            <i classe="fas fa-map-marker-alt"></i>
-                            <extensão>São Paulo | Itaquaquecetuba</extensão>
-                        </dividir>
-                        <dividir classe="item de contato">
-                            <i classe="fa fa-clock"></i>
-                            <extensão>Disponível para projetos</extensão>
-                        </dividir>
-                    </dividir>
-                    <dividir classe="contato-social">
-                        <a href="https://github.com/josemarbritodev" alto="_em branco" classe="link social">
-                            <i classe="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/josemarbrito" alto="_em branco" classe="link social">
-                            <i classe="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:josemarbritosantos@gmail.com" classe="link social">
-                            <i classe="fas fa-envelope"></i>
-                        </a>
-                    </dividir>
-                </dividir>
-                <forma classe="formulário de contato">
-                    <dividir classe="grupo de formulários">
-                        <entrada tipo="texto" id="nome" nome="nome" necessário>
-                        <rótulo parágrafo="nome">Nome</rótulo>
-                    </dividir>
-                    <dividir classe="grupo de formulários">
-                        <entrada tipo="e-mail" id="e-mail" nome="e-mail" necessário>
-                        <rótulo parágrafo="e-mail">E-mail</rótulo>
-                    </dividir>
-                    <dividir classe="grupo de formulários">
-                        <área de texto id="mensagem" nome="mensagem" linhas="5" necessário></área de texto>
-                        <rótulo parágrafo="mensagem">Mensagem</rótulo>
-                    </dividir>
-                    <botão tipo="enviar" classe="btn btn-primário">
-                        <i classe="fas fa-paper-plane"></i>
- Enviar Mensagem
-                    </botão>
-                </forma>
-            </dividir>
-        </dividir>
-    </sessão>
+        <div class="contact-box">
+          <p><strong>E-mail:</strong> seuemail@email.com</p>
+          <p><strong>LinkedIn:</strong> linkedin.com/in/seuperfil</p>
+          <p><strong>GitHub:</strong> github.com/seuusuario</p>
+          <p><strong>Cidade:</strong> São Paulo - SP</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Rodapé -->
-    <rodapé classe="rodapé">
-        <dividir classe="contêiner">
-            <dividir classe="conteúdo do rodapé">
-                <p>&copia; 2026 Josemar Brito | BritosCode. Todos os direitos reservados.</p>
-                <p>Desenvolvido com muito ☕☕☕☕☕</p>
- </dividir>
- </dividir>
-    </rodapé>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 - Seu Nome Completo</p>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </footer>
 
-    <!-- Script EmailJS -->
-    <roteiro tipo="texto/javascript" fonte="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></roteiro>
-    <!-- Seu JavaScript -->
-    <roteiro fonte="script.js"></roteiro>
-
-</corpo>
+  <script src="script.js"></script>
+</body>
 </html>
