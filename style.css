@@ -341,3 +341,34 @@ a {
     padding: 56px 0;
   }
 }
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  border: 1px solid rgba(94, 234, 212, 0.18);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+}
