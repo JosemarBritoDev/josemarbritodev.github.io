@@ -52,7 +52,6 @@ ul {
   margin: 0 auto;
 }
 
-/* HEADER */
 .header {
   position: sticky;
   top: 0;
@@ -108,7 +107,6 @@ ul {
   cursor: pointer;
 }
 
-/* HERO */
 .hero {
   padding: 72px 0;
   background: linear-gradient(180deg, #0b1120 0%, #10192d 100%);
@@ -155,7 +153,6 @@ ul {
   margin-top: 28px;
 }
 
-/* BUTTONS */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -188,7 +185,6 @@ ul {
   transform: translateY(-2px);
 }
 
-/* CARDS GERAIS */
 .hero-card,
 .card,
 .timeline-item,
@@ -251,7 +247,6 @@ ul {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
 }
 
-/* EXPERIÊNCIAS */
 .timeline {
   display: grid;
   gap: 18px;
@@ -270,7 +265,6 @@ ul {
   color: var(--muted);
 }
 
-/* CERTIFICADOS E PROJETOS */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -308,7 +302,6 @@ ul {
   color: var(--muted);
 }
 
-/* PROJETOS */
 .project-card h3 {
   margin-bottom: 12px;
 }
@@ -341,7 +334,6 @@ ul {
   background: var(--accent);
 }
 
-/* STACK */
 .stack-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -384,10 +376,8 @@ ul {
   width: 28px;
   height: 28px;
   object-fit: contain;
-  filter: brightness(1.08);
 }
 
-/* CONTATO */
 .contact-box {
   padding: 24px;
 }
@@ -422,7 +412,6 @@ ul {
   height: 22px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: brightness(1.08);
 }
 
 .contact-item .icon {
@@ -432,7 +421,6 @@ ul {
   flex-shrink: 0;
 }
 
-/* FOOTER */
 .footer {
   border-top: 1px solid var(--border);
   padding: 22px 0;
@@ -454,7 +442,6 @@ ul {
   color: var(--accent);
 }
 
-/* RESPONSIVO */
 @media (max-width: 900px) {
   .hero-content,
   .cards-grid,
