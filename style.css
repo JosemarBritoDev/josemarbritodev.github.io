@@ -1,17 +1,21 @@
 :root {
   --bg: #0b1120;
   --surface: #111827;
-  --surface-2: #1f2937;
-  --card: #182233;
+  --surface-2: #1b2638;
+  --card: #162133;
+  --card-strong: #1b2940;
   --text: #e5e7eb;
   --muted: #94a3b8;
-  --primary: #0f766e;
-  --primary-hover: #115e59;
-  --accent: #5eead4;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --accent: #60a5fa;
+  --accent-soft: rgba(96, 165, 250, 0.12);
   --border: rgba(148, 163, 184, 0.18);
   --white: #ffffff;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.34);
   --radius: 18px;
+  --radius-sm: 14px;
   --transition: 0.3s ease;
   --max-width: 1120px;
 }
@@ -67,18 +71,20 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  position: relative;
 }
 
 .brand {
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), #0f172a);
   color: var(--white);
   display: grid;
   place-items: center;
   font-weight: 800;
   font-size: 1rem;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.28);
 }
 
 .nav-links {
@@ -108,8 +114,10 @@ ul {
 }
 
 .hero {
-  padding: 72px 0;
-  background: linear-gradient(180deg, #0b1120 0%, #10192d 100%);
+  padding: 84px 0 72px;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.10), transparent 32%),
+    linear-gradient(180deg, #0b1120 0%, #10192d 100%);
 }
 
 .hero-content {
@@ -130,20 +138,22 @@ ul {
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
-  line-height: 1.1;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.05;
   margin-bottom: 14px;
 }
 
 .role {
   color: #cbd5e1;
-  font-size: 1.1rem;
-  margin-bottom: 14px;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+  font-weight: 500;
 }
 
 .description {
-  max-width: 700px;
+  max-width: 720px;
   color: var(--muted);
+  font-size: 1.02rem;
 }
 
 .hero-buttons {
@@ -198,19 +208,23 @@ ul {
 
 .hero-card {
   padding: 24px;
+  background: linear-gradient(180deg, var(--card-strong), var(--card));
 }
 
 .hero-card h3 {
   margin-bottom: 14px;
+  font-size: 1.15rem;
 }
 
 .hero-card ul {
   list-style-position: inside;
   color: var(--muted);
+  display: grid;
+  gap: 10px;
 }
 
 .section {
-  padding: 72px 0;
+  padding: 76px 0;
 }
 
 .alt {
@@ -233,18 +247,25 @@ ul {
 
 .section-header h2 {
   font-size: clamp(1.8rem, 4vw, 2.7rem);
+  margin-bottom: 10px;
+}
+
+.section-description {
+  max-width: 780px;
+  color: var(--muted);
 }
 
 .card {
   padding: 24px;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .card:hover,
 .timeline-item:hover,
 .certificate-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(96, 165, 250, 0.28);
 }
 
 .timeline {
@@ -254,11 +275,15 @@ ul {
 
 .timeline-item {
   padding: 24px;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .timeline-top {
   margin-bottom: 10px;
+}
+
+.timeline-top h3 {
+  margin-bottom: 4px;
 }
 
 .timeline-top span {
@@ -273,7 +298,7 @@ ul {
 
 .certificate-card {
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .certificate-card img {
@@ -288,6 +313,7 @@ ul {
 
 .certificate-info h3 {
   margin-bottom: 8px;
+  font-size: 1.02rem;
 }
 
 .certificate-info p,
@@ -355,21 +381,27 @@ ul {
 }
 
 .logos span {
-  width: 52px;
+  min-width: 52px;
   height: 52px;
+  padding: 0 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
   border-radius: 14px;
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .logos span:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(96, 165, 250, 0.32);
 }
 
 .logos img {
@@ -398,13 +430,14 @@ ul {
   border-radius: 14px;
   color: var(--text);
   text-decoration: none;
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
 }
 
 .contact-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
   background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(96, 165, 250, 0.26);
 }
 
 .contact-item img {
@@ -424,6 +457,7 @@ ul {
 .footer {
   border-top: 1px solid var(--border);
   padding: 22px 0;
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .footer-content {
@@ -448,6 +482,10 @@ ul {
   .stack-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-card {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -459,8 +497,8 @@ ul {
     display: none;
     position: absolute;
     top: 76px;
-    right: 16px;
-    width: 220px;
+    right: 0;
+    width: min(240px, calc(100vw - 32px));
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -490,8 +528,10 @@ ul {
   }
 
   .logos span {
-    width: 48px;
+    min-width: 48px;
     height: 48px;
+    font-size: 0.78rem;
+    padding: 0 10px;
   }
 
   .logos img {
