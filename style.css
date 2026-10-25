@@ -1,23 +1,27 @@
-/* VARIÁVEIS DE DESIGN PREMIUM & GLASSMORPHISM */
+/* ==========================================================================
+   PALETA PRETO COM ROXO (NEON PURPLE / DARK MODE)
+   ========================================================================== */
 :root {
-  --bg-main: #050811;
-  --bg-surface: #0b1120;
-  --bg-card: rgba(15, 23, 42, 0.7);
-  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --bg-main: #06040a;
+  --bg-surface: #0d0914;
+  --bg-card: rgba(19, 13, 31, 0.75);
+  --bg-card-hover: rgba(31, 21, 51, 0.9);
   
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --primary-glow: rgba(37, 99, 235, 0.4);
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --primary-glow: rgba(139, 92, 246, 0.4);
   
-  --accent: #38bdf8;
-  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  --accent: #c084fc;
+  --accent-gradient: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e879f9 100%);
   
   --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(56, 189, 248, 0.4);
+  --text-muted: #a1a1aa;
+  
+  --border: rgba(168, 85, 247, 0.15);
+  --border-hover: rgba(168, 85, 247, 0.5);
 }
 
+/* RESET & CONFIGURAÇÕES BASE */
 * {
   margin: 0;
   padding: 0;
@@ -35,8 +39,8 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 85% 85%, rgba(56, 189, 248, 0.1) 0%, transparent 40%);
+    radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(192, 132, 252, 0.12) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -55,7 +59,7 @@ a {
 .header {
   position: sticky;
   top: 0;
-  background: rgba(5, 8, 17, 0.85);
+  background: rgba(6, 4, 10, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -112,7 +116,6 @@ a {
 .hero {
   padding: 8rem 0 5rem;
   text-align: center;
-  position: relative;
 }
 
 .hero-content {
@@ -124,15 +127,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(168, 85, 247, 0.1);
   color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.3);
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
 }
 
 .hero h1 {
@@ -141,7 +144,7 @@ a {
   line-height: 1.15;
   margin-bottom: 1.5rem;
   letter-spacing: -1.5px;
-  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #d8b4fe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -150,7 +153,6 @@ a {
   font-size: 1.2rem;
   color: var(--text-muted);
   margin-bottom: 2.5rem;
-  font-weight: 400;
 }
 
 .hero-btns {
@@ -182,7 +184,7 @@ a {
 .btn.primary:hover {
   background: var(--primary-hover);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
 }
 
 .btn.secondary {
@@ -243,7 +245,7 @@ h2 {
 .service-card:hover {
   border-color: var(--border-hover);
   transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
 }
 
 .service-card i {
@@ -290,9 +292,9 @@ h2 {
 }
 
 .project-card.featured {
-  border-color: rgba(37, 99, 235, 0.6);
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.12) 0%, rgba(15, 23, 42, 0.8) 100%);
-  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2);
+  border-color: rgba(168, 85, 247, 0.6);
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.15) 0%, rgba(19, 13, 31, 0.8) 100%);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
 }
 
 .project-header {
@@ -310,10 +312,10 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
-.tag.saas { color: #38bdf8; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.25); }
-.tag.erp { color: #fb7185; background: rgba(251, 113, 133, 0.12); border: 1px solid rgba(251, 113, 133, 0.25); }
-.tag.commercial { color: #34d399; background: rgba(52, 211, 153, 0.12); border: 1px solid rgba(52, 211, 153, 0.25); }
-.tag.automation { color: #c084fc; background: rgba(192, 132, 252, 0.12); border: 1px solid rgba(192, 132, 252, 0.25); }
+.tag.saas { color: #c084fc; background: rgba(192, 132, 252, 0.12); border: 1px solid rgba(192, 132, 252, 0.25); }
+.tag.erp { color: #f472b6; background: rgba(244, 114, 182, 0.12); border: 1px solid rgba(244, 114, 182, 0.25); }
+.tag.commercial { color: #38bdf8; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.25); }
+.tag.automation { color: #e879f9; background: rgba(232, 121, 249, 0.12); border: 1px solid rgba(232, 121, 249, 0.25); }
 .tag.infra { color: #fbbf24; background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.25); }
 
 .project-card h3 {
@@ -335,10 +337,10 @@ h2 {
 
 .tech-list li {
   font-size: 0.78rem;
-  background-color: rgba(5, 8, 17, 0.7);
+  background-color: rgba(6, 4, 10, 0.8);
   padding: 0.3rem 0.7rem;
   border-radius: 6px;
-  color: #cbd5e1;
+  color: #e2e8f0;
   border: 1px solid var(--border);
 }
 
@@ -361,8 +363,8 @@ h2 {
 .stack-icon {
   width: 60px;
   height: 60px;
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
   color: var(--accent);
   border-radius: 50%;
   display: flex;
@@ -428,7 +430,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #050811;
+    background-color: #06040a;
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     padding: 2rem;
