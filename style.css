@@ -418,6 +418,334 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ==========================================================================
+   AVATAR INTERATIVO BRITOSBOT
+   ========================================================================== */
+.avatar-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+/* Balão Flutuante de Chamada */
+.avatar-callout {
+  background: rgba(19, 13, 31, 0.95);
+  border: 1px solid rgba(192, 132, 252, 0.5);
+  color: var(--text-main);
+  padding: 0.65rem 1rem;
+  border-radius: 14px 14px 4px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 18px rgba(168, 85, 247, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  animation: calloutBounce 3s ease-in-out infinite;
+  backdrop-filter: blur(12px);
+}
+
+.avatar-callout.hidden {
+  display: none;
+}
+
+.avatar-callout button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.avatar-callout button:hover {
+  color: #ffffff;
+}
+
+/* Botão do Boneco */
+.avatar-character-btn {
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, rgba(13, 9, 20, 0.9) 75%);
+  border: 1.5px solid rgba(168, 85, 247, 0.55);
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 25px rgba(139, 92, 246, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+}
+
+.avatar-character-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 35px rgba(192, 132, 252, 0.6);
+}
+
+/* Animações do Boneco SVG */
+.bot-body-group {
+  animation: botFloat 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.bot-shadow {
+  animation: shadowPulse 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.bot-eyes {
+  animation: botBlink 4.5s infinite;
+  transform-origin: 60px 41px;
+}
+
+.bot-antenna-tip,
+.bot-core {
+  animation: coreGlow 1.8s ease-in-out infinite alternate;
+}
+
+/* Animação durante a digitação do texto */
+.avatar-widget.is-typing .mouth-bar {
+  animation: equalizerSpeak 0.35s ease-in-out infinite alternate;
+  transform-origin: center 54px;
+}
+.avatar-widget.is-typing .bar-1 { animation-delay: 0s; }
+.avatar-widget.is-typing .bar-2 { animation-delay: 0.1s; }
+.avatar-widget.is-typing .bar-3 { animation-delay: 0.2s; }
+.avatar-widget.is-typing .bar-4 { animation-delay: 0.15s; }
+
+.avatar-widget.is-typing .bot-arm-right {
+  animation: armGesture 0.7s ease-in-out infinite alternate;
+  transform-origin: 93px 82px;
+}
+
+/* Painel Interativo */
+.avatar-panel {
+  width: 380px;
+  max-width: calc(100vw - 2rem);
+  background: rgba(13, 9, 20, 0.96);
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(139, 92, 246, 0.25);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  animation: panelSlideUp 0.25s ease-out;
+}
+
+.avatar-panel.open {
+  display: flex;
+}
+
+.avatar-panel-header {
+  padding: 1rem 1.2rem;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.22) 0%, rgba(19, 13, 31, 0.9) 100%);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+.avatar-panel-title strong {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.avatar-panel-title small {
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.avatar-panel-body {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* Pills de Sistemas */
+.topic-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.topic-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topic-pill:hover {
+  border-color: var(--accent);
+  color: var(--text-main);
+}
+
+.topic-pill.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 2px 12px var(--primary-glow);
+}
+
+/* Abas de Aspectos */
+.detail-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(6, 4, 10, 0.7);
+  padding: 0.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.detail-tab {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.45rem 0.3rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.detail-tab.active {
+  background: rgba(168, 85, 247, 0.22);
+  color: #ffffff;
+}
+
+/* Caixa de Texto */
+.speech-box {
+  background: rgba(19, 13, 31, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 140px;
+}
+
+.speech-box h4 {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+
+.speech-box p {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+.avatar-panel-footer {
+  padding: 0.85rem 1.1rem;
+  border-top: 1px solid var(--border);
+  background: rgba(6, 4, 10, 0.6);
+}
+
+.btn-whatsapp-mini {
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.btn-whatsapp-mini:hover {
+  background: #15803d;
+}
+
+@keyframes botFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { transform: scaleX(1); opacity: 0.35; }
+  50% { transform: scaleX(0.85); opacity: 0.2; }
+}
+
+@keyframes botBlink {
+  0%, 94%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.1); }
+}
+
+@keyframes coreGlow {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+@keyframes equalizerSpeak {
+  0% { transform: scaleY(0.6); }
+  100% { transform: scaleY(1.9); }
+}
+
+@keyframes armGesture {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-14deg); }
+}
+
+@keyframes calloutBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes panelSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* RESPONSIVIDADE MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -444,5 +772,20 @@ footer {
 
   .hero h1 {
     font-size: 2.35rem;
+  }
+
+  .avatar-widget {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .avatar-character-btn {
+    width: 76px;
+    height: 76px;
+  }
+
+  .britos-bot-svg {
+    width: 68px;
+    height: 74px;
   }
 }
