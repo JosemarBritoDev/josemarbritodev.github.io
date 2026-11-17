@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. AVATAR INTERATIVO BRITOSBOT (TEXTO + ANIMAÇÃO)
+    // 2. AVATAR INTERATIVO BRITOSBOT (PC + MOBILE)
     const widget = document.getElementById('avatar-widget');
     const trigger = document.getElementById('avatar-trigger');
     const panel = document.getElementById('avatar-panel');
     const closeBtn = document.getElementById('avatar-close');
+    const backdrop = document.getElementById('avatar-backdrop');
     const callout = document.getElementById('avatar-callout');
     const calloutClose = document.getElementById('callout-close');
 
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             whatsappMsg: 'Olá Josemar! Estava navegando no site BritosCode.tech e gostaria de conhecer melhor suas soluções para minha empresa.',
             oque: {
                 title: 'Bem-vindo à BritosCode.tech!',
-                text: 'Eu sou o BritosBot. Desenvolvemos ERPs completos, plataformas SaaS sob medida, automações em Python e infraestrutura de redes corporativas. Selecione um sistema acima para explorar!'
+                text: 'Eu sou o BritosBot. Desenvolvemos ERPs completos, plataformas SaaS sob medida, automações em Python e infraestrutura de redes corporativas. Toque em um sistema acima para explorar!'
             },
             como: {
                 title: 'Engenharia Ponta a Ponta',
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             contratar: {
                 title: 'Como implantar na sua empresa',
-                text: 'Você pode licenciar nossos sistemas SaaS prontos ou solicitar um projeto sob medida. Clique no botão verde abaixo para falar direto com o Josemar no WhatsApp e agendar uma demonstração.'
+                text: 'Você pode licenciar nossos sistemas SaaS prontos ou solicitar um projeto sob medida. Toque no botão verde abaixo para falar direto com o Josemar no WhatsApp e agendar uma demonstração.'
             }
         },
         matcom: {
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             contratar: {
                 title: 'BC Health na sua Clínica',
-                text: 'Implantamos o ambiente exclusivo da sua clínica com perfis de acesso para recepção, médicos e gestão. Clique abaixo para solicitar uma demonstração.'
+                text: 'Implantamos o ambiente exclusivo da sua clínica com perfis de acesso para recepção, médicos e gestão. Toque abaixo para solicitar uma demonstração.'
             }
         },
         bcmodas: {
@@ -175,6 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         topicPills.forEach(pill => {
             pill.classList.toggle('active', pill.dataset.topic === currentTopic);
+            if (pill.dataset.topic === currentTopic) {
+                pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
         });
 
         detailTabs.forEach(tab => {
@@ -186,25 +190,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function openPanel() {
+        panel.classList.add('open');
+        widget.classList.add('panel-open');
+        panel.setAttribute('aria-hidden', 'false');
+        if (callout) callout.classList.add('hidden');
+        if (backdrop && window.innerWidth <= 768) {
+            backdrop.classList.add('visible');
+        }
+        updateAvatarView();
+    }
+
+    function closePanel() {
+        panel.classList.remove('open');
+        widget.classList.remove('panel-open');
+        panel.setAttribute('aria-hidden', 'true');
+        if (backdrop) backdrop.classList.remove('visible');
+        stopTypingAnimation();
+    }
+
     // Abrir / Fechar Painel
     trigger.addEventListener('click', () => {
-        const isOpening = !panel.classList.contains('open');
-        panel.classList.toggle('open');
-        panel.setAttribute('aria-hidden', !isOpening);
-        if (callout) callout.classList.add('hidden');
-
-        if (isOpening) {
-            updateAvatarView();
+        if (panel.classList.contains('open')) {
+            closePanel();
         } else {
-            stopTypingAnimation();
+            openPanel();
         }
     });
 
-    closeBtn.addEventListener('click', () => {
-        panel.classList.remove('open');
-        panel.setAttribute('aria-hidden', 'true');
-        stopTypingAnimation();
-    });
+    closeBtn.addEventListener('click', closePanel);
+    if (backdrop) backdrop.addEventListener('click', closePanel);
 
     if (calloutClose) {
         calloutClose.addEventListener('click', (e) => {

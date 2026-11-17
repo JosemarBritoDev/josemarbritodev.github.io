@@ -419,8 +419,22 @@ footer {
 }
 
 /* ==========================================================================
-   AVATAR INTERATIVO BRITOSBOT
+   AVATAR INTERATIVO BRITOSBOT (PC + MOBILE OTIMIZADO)
    ========================================================================== */
+.avatar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 2, 6, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1150;
+}
+
+.avatar-backdrop.visible {
+  display: block;
+}
+
 .avatar-widget {
   position: fixed;
   bottom: 1.5rem;
@@ -434,8 +448,8 @@ footer {
 
 /* Balão Flutuante de Chamada */
 .avatar-callout {
-  background: rgba(19, 13, 31, 0.95);
-  border: 1px solid rgba(192, 132, 252, 0.5);
+  background: rgba(19, 13, 31, 0.96);
+  border: 1px solid rgba(192, 132, 252, 0.55);
   color: var(--text-main);
   padding: 0.65rem 1rem;
   border-radius: 14px 14px 4px 14px;
@@ -445,8 +459,9 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  animation: calloutBounce 3s ease-in-out infinite;
+  animation: calloutBounce 2.8s ease-in-out infinite;
   backdrop-filter: blur(12px);
+  max-width: 240px;
 }
 
 .avatar-callout.hidden {
@@ -457,19 +472,17 @@ footer {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   line-height: 1;
+  padding: 0 2px;
 }
 
-.avatar-callout button:hover {
-  color: #ffffff;
-}
-
-/* Botão do Boneco */
+/* Botão do Boneco com Pulso Neon */
 .avatar-character-btn {
-  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, rgba(13, 9, 20, 0.9) 75%);
-  border: 1.5px solid rgba(168, 85, 247, 0.55);
+  position: relative;
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.32) 0%, rgba(13, 9, 20, 0.94) 75%);
+  border: 2px solid rgba(192, 132, 252, 0.65);
   border-radius: 50%;
   width: 92px;
   height: 92px;
@@ -477,60 +490,43 @@ footer {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 25px rgba(139, 92, 246, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(139, 92, 246, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
+/* Anel pulsante ao redor do boneco para chamar atenção no mobile */
+.avatar-character-btn::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(192, 132, 252, 0.45);
+  animation: ringPulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+.avatar-character-btn:active,
 .avatar-character-btn:hover {
-  transform: scale(1.07);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 35px rgba(192, 132, 252, 0.6);
+  transform: scale(1.06);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 38px rgba(192, 132, 252, 0.75);
 }
 
-/* Animações do Boneco SVG */
-.bot-body-group {
-  animation: botFloat 3.2s ease-in-out infinite;
-  transform-origin: center;
-}
-
-.bot-shadow {
-  animation: shadowPulse 3.2s ease-in-out infinite;
-  transform-origin: center;
-}
-
-.bot-eyes {
-  animation: botBlink 4.5s infinite;
-  transform-origin: 60px 41px;
-}
-
-.bot-antenna-tip,
-.bot-core {
-  animation: coreGlow 1.8s ease-in-out infinite alternate;
-}
-
-/* Animação durante a digitação do texto */
-.avatar-widget.is-typing .mouth-bar {
-  animation: equalizerSpeak 0.35s ease-in-out infinite alternate;
-  transform-origin: center 54px;
-}
-.avatar-widget.is-typing .bar-1 { animation-delay: 0s; }
-.avatar-widget.is-typing .bar-2 { animation-delay: 0.1s; }
-.avatar-widget.is-typing .bar-3 { animation-delay: 0.2s; }
-.avatar-widget.is-typing .bar-4 { animation-delay: 0.15s; }
-
-.avatar-widget.is-typing .bot-arm-right {
-  animation: armGesture 0.7s ease-in-out infinite alternate;
-  transform-origin: 93px 82px;
+/* Destaque extra no botão quando está digitando */
+.avatar-widget.is-typing .avatar-character-btn {
+  border-color: #e879f9;
+  box-shadow: 0 0 35px rgba(232, 121, 249, 0.75);
 }
 
 /* Painel Interativo */
 .avatar-panel {
-  width: 380px;
+  width: 390px;
   max-width: calc(100vw - 2rem);
-  background: rgba(13, 9, 20, 0.96);
-  border: 1px solid rgba(168, 85, 247, 0.45);
+  background: rgba(13, 9, 20, 0.98);
+  border: 1px solid rgba(168, 85, 247, 0.5);
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(139, 92, 246, 0.3);
   backdrop-filter: blur(20px);
   overflow: hidden;
   display: none;
@@ -544,7 +540,7 @@ footer {
 
 .avatar-panel-header {
   padding: 1rem 1.2rem;
-  background: linear-gradient(90deg, rgba(139, 92, 246, 0.22) 0%, rgba(19, 13, 31, 0.9) 100%);
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.25) 0%, rgba(19, 13, 31, 0.95) 100%);
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
@@ -577,11 +573,11 @@ footer {
 }
 
 .icon-btn {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   color: var(--text-main);
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -606,19 +602,21 @@ footer {
 .topic-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .topic-pill {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.35rem 0.7rem;
+  padding: 0.42rem 0.78rem;
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .topic-pill:hover {
@@ -637,7 +635,7 @@ footer {
 .detail-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background: rgba(6, 4, 10, 0.7);
+  background: rgba(6, 4, 10, 0.75);
   padding: 0.25rem;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -647,52 +645,61 @@ footer {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  padding: 0.45rem 0.3rem;
+  padding: 0.5rem 0.3rem;
   border-radius: 7px;
   cursor: pointer;
   transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .detail-tab.active {
-  background: rgba(168, 85, 247, 0.22);
+  background: rgba(168, 85, 247, 0.25);
   color: #ffffff;
 }
 
 /* Caixa de Texto */
 .speech-box {
-  background: rgba(19, 13, 31, 0.85);
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  background: rgba(19, 13, 31, 0.9);
+  border: 1px solid rgba(168, 85, 247, 0.3);
   border-radius: 12px;
   padding: 1rem;
-  min-height: 140px;
+  min-height: 145px;
 }
 
 .speech-box h4 {
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   color: var(--accent);
   margin-bottom: 0.45rem;
 }
 
 .speech-box p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-main);
   line-height: 1.55;
+}
+
+/* Cursor piscando enquanto o boneco digita */
+.avatar-widget.is-typing .speech-box p::after {
+  content: "▋";
+  color: var(--accent);
+  margin-left: 2px;
+  animation: cursorBlink 0.7s infinite;
 }
 
 .avatar-panel-footer {
   padding: 0.85rem 1.1rem;
   border-top: 1px solid var(--border);
-  background: rgba(6, 4, 10, 0.6);
+  background: rgba(6, 4, 10, 0.7);
 }
 
 .btn-whatsapp-mini {
   background: #16a34a;
   color: #ffffff;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.65rem 1rem;
+  padding: 0.72rem 1rem;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -706,34 +713,10 @@ footer {
   background: #15803d;
 }
 
-@keyframes botFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
-
-@keyframes shadowPulse {
-  0%, 100% { transform: scaleX(1); opacity: 0.35; }
-  50% { transform: scaleX(0.85); opacity: 0.2; }
-}
-
-@keyframes botBlink {
-  0%, 94%, 100% { transform: scaleY(1); }
-  97% { transform: scaleY(0.1); }
-}
-
-@keyframes coreGlow {
-  0% { opacity: 0.6; }
-  100% { opacity: 1; }
-}
-
-@keyframes equalizerSpeak {
-  0% { transform: scaleY(0.6); }
-  100% { transform: scaleY(1.9); }
-}
-
-@keyframes armGesture {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-14deg); }
+@keyframes ringPulse {
+  0% { transform: scale(0.95); opacity: 0.85; }
+  70% { transform: scale(1.22); opacity: 0; }
+  100% { transform: scale(1.22); opacity: 0; }
 }
 
 @keyframes calloutBounce {
@@ -742,8 +725,13 @@ footer {
 }
 
 @keyframes panelSlideUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cursorBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 /* RESPONSIVIDADE MOBILE */
@@ -774,18 +762,55 @@ footer {
     font-size: 2.35rem;
   }
 
+  /* Avatar Mobile: Bottom Sheet com Boneco Visível no Topo */
   .avatar-widget {
     bottom: 1rem;
     right: 1rem;
   }
 
+  .avatar-widget.panel-open {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .avatar-widget.panel-open .avatar-character-btn {
+    width: 78px;
+    height: 78px;
+    margin-bottom: -24px;
+    z-index: 1210;
+    order: -1;
+  }
+
+  .avatar-widget.panel-open .avatar-panel {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 14px;
+    border-radius: 22px;
+  }
+
   .avatar-character-btn {
-    width: 76px;
-    height: 76px;
+    width: 78px;
+    height: 78px;
   }
 
   .britos-bot-svg {
     width: 68px;
     height: 74px;
+  }
+
+  /* Carrossel horizontal com o dedo nos botões de sistemas */
+  .topic-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .topic-pills::-webkit-scrollbar {
+    display: none;
   }
 }
