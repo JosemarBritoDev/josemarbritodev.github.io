@@ -344,6 +344,27 @@ h2 {
   border: 1px solid var(--border);
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 0.55rem 0.95rem;
+  border-radius: 8px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
 /* STACK */
 .stack-grid {
   display: grid;
@@ -461,7 +482,7 @@ footer {
   gap: 0.65rem;
   animation: calloutBounce 2.8s ease-in-out infinite;
   backdrop-filter: blur(12px);
-  max-width: 240px;
+  max-width: 245px;
 }
 
 .avatar-callout.hidden {
@@ -496,7 +517,6 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Anel pulsante ao redor do boneco para chamar atenção no mobile */
 .avatar-character-btn::after {
   content: "";
   position: absolute;
@@ -513,7 +533,6 @@ footer {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 38px rgba(192, 132, 252, 0.75);
 }
 
-/* Destaque extra no botão quando está digitando */
 .avatar-widget.is-typing .avatar-character-btn {
   border-color: #e879f9;
   box-shadow: 0 0 35px rgba(232, 121, 249, 0.75);
@@ -680,7 +699,6 @@ footer {
   line-height: 1.55;
 }
 
-/* Cursor piscando enquanto o boneco digita */
 .avatar-widget.is-typing .speech-box p::after {
   content: "▋";
   color: var(--accent);
@@ -692,14 +710,41 @@ footer {
   padding: 0.85rem 1.1rem;
   border-top: 1px solid var(--border);
   background: rgba(6, 4, 10, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.btn-site-mini {
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.68rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-shadow: 0 4px 16px var(--primary-glow);
+  transition: background 0.2s ease;
+}
+
+.btn-site-mini:hover {
+  background: var(--primary-hover);
+}
+
+.btn-site-mini.hidden {
+  display: none;
 }
 
 .btn-whatsapp-mini {
   background: #16a34a;
   color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  padding: 0.72rem 1rem;
+  padding: 0.68rem 1rem;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -762,7 +807,6 @@ footer {
     font-size: 2.35rem;
   }
 
-  /* Avatar Mobile: Bottom Sheet com Boneco Visível no Topo */
   .avatar-widget {
     bottom: 1rem;
     right: 1rem;
@@ -801,7 +845,6 @@ footer {
     height: 74px;
   }
 
-  /* Carrossel horizontal com o dedo nos botões de sistemas */
   .topic-pills {
     flex-wrap: nowrap;
     overflow-x: auto;

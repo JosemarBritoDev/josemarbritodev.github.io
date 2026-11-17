@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. AVATAR INTERATIVO BRITOSBOT (PC + MOBILE)
+    // 2. AVATAR INTERATIVO BRITOSBOT (TODOS OS SISTEMAS + LINKS NOS 2 SAAS)
     const widget = document.getElementById('avatar-widget');
     const trigger = document.getElementById('avatar-trigger');
     const panel = document.getElementById('avatar-panel');
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const speechTitle = document.getElementById('speech-title');
     const speechText = document.getElementById('speech-text');
+    const siteCta = document.getElementById('avatar-site-cta');
     const whatsappCta = document.getElementById('avatar-whatsapp-cta');
     const topicPills = document.querySelectorAll('.topic-pill');
     const detailTabs = document.querySelectorAll('.detail-tab');
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const knowledgeBase = {
         intro: {
+            siteUrl: null,
             whatsappMsg: 'Olá Josemar! Estava navegando no site BritosCode.tech e gostaria de conhecer melhor suas soluções para minha empresa.',
             oque: {
                 title: 'Bem-vindo à BritosCode.tech!',
@@ -53,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         matcom: {
+            siteUrl: 'https://matcom-britoscode.vercel.app/',
+            siteLabel: 'Site Oficial',
             whatsappMsg: 'Olá Josemar! Vi a apresentação do MatCom ERP no site e gostaria de saber como implantar na minha loja de materiais de construção.',
             oque: {
                 title: 'MatCom — ERP para Materiais de Construção',
@@ -64,25 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             contratar: {
                 title: 'Implantação Rápida na Nuvem',
-                text: 'Por ser 100% em nuvem (SaaS), sua loja não precisa investir em servidores locais. Configuramos o ambiente com a logo da sua empresa, tabelas de preços e certificados fiscais. Fale conosco no WhatsApp!'
+                text: 'Por ser 100% em nuvem (SaaS), sua loja não precisa investir em servidores locais. Acesse o site oficial do MatCom no botão roxo abaixo ou fale conosco pelo WhatsApp para implantar na sua loja!'
             }
         },
         bchealth: {
-            whatsappMsg: 'Olá Josemar! Gostaria de conhecer melhor o BC Health para gestão da minha clínica.',
+            siteUrl: 'https://clinica-saas-5isy.onrender.com/',
+            siteLabel: 'Site Oficial',
+            whatsappMsg: 'Olá Josemar! Vi o BC Health no site e gostaria de conhecer melhor para gestão da minha clínica.',
             oque: {
                 title: 'BC Health — Gestão Clínica & Workflow',
-                text: 'Plataforma criada para clínicas médicas e consultórios organizarem recepção, agenda, fluxo visual de pacientes em quadro Kanban, indicadores de atendimento e disparos automáticos via WhatsApp.'
+                text: 'Plataforma criada para clínicas médicas e consultórios organizarem recepção, agenda, fluxo visual de pacientes em quadro Kanban, controle de planos e comunicação integrada via WhatsApp.'
             },
             como: {
-                title: 'Stack de Alta Performance do BC Health',
-                text: 'Desenvolvido com Next.js, Node.js, Prisma, PostgreSQL e cache em memória com Redis, garantindo resposta instantânea na recepção e integração assíncrona com API do WhatsApp.'
+                title: 'Stack & Segurança do BC Health',
+                text: 'Desenvolvido com Next.js 16, TypeScript, Prisma ORM e PostgreSQL no Supabase, hospedado no Render com controle dinâmico de permissões por plano e integração de cobranças via Asaas.'
             },
             contratar: {
                 title: 'BC Health na sua Clínica',
-                text: 'Implantamos o ambiente exclusivo da sua clínica com perfis de acesso para recepção, médicos e gestão. Toque abaixo para solicitar uma demonstração.'
+                text: 'Implantamos o ambiente exclusivo da sua clínica com perfis de acesso para recepção, médicos e gestão. Acesse o site oficial no botão roxo abaixo ou solicite uma demonstração no WhatsApp!'
             }
         },
         bcmodas: {
+            siteUrl: null,
             whatsappMsg: 'Olá Josemar! Tenho interesse no BCModas ERP para gestão de confecção e produção.',
             oque: {
                 title: 'BCModas — ERP Industrial & E-commerce',
@@ -98,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         renkgas: {
+            siteUrl: null,
             whatsappMsg: 'Olá Josemar! Quero saber mais sobre o sistema Renk Gás para distribuidora de água e gás.',
             oque: {
                 title: 'Renk Gás — Gestão de Vendas & Entregas',
@@ -113,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         bclivros: {
+            siteUrl: null,
             whatsappMsg: 'Olá Josemar! Achei muito interessante o BC Livros e automações em Python. Gostaria de conversar sobre um projeto.',
             oque: {
                 title: 'BC Livros — Biblioteca & Ingestão de Dados',
@@ -128,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         infra: {
+            siteUrl: null,
             whatsappMsg: 'Olá Josemar! Preciso de consultoria em redes, firewall ou servidores para minha empresa.',
             oque: {
                 title: 'Redes Corporativas, Firewall & Monitoramento',
@@ -174,6 +184,14 @@ document.addEventListener('DOMContentLoaded', () => {
         speechTitle.textContent = aspectData.title;
         whatsappCta.href = WHATSAPP_BASE + encodeURIComponent(topicData.whatsappMsg);
 
+        if (topicData.siteUrl) {
+            siteCta.href = topicData.siteUrl;
+            siteCta.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square"></i> ${topicData.siteLabel || 'Acessar Site Oficial'}`;
+            siteCta.classList.remove('hidden');
+        } else {
+            siteCta.classList.add('hidden');
+        }
+
         topicPills.forEach(pill => {
             pill.classList.toggle('active', pill.dataset.topic === currentTopic);
             if (pill.dataset.topic === currentTopic) {
@@ -209,7 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
         stopTypingAnimation();
     }
 
-    // Abrir / Fechar Painel
     trigger.addEventListener('click', () => {
         if (panel.classList.contains('open')) {
             closePanel();
@@ -228,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Trocar Sistema
     topicPills.forEach(pill => {
         pill.addEventListener('click', () => {
             currentTopic = pill.dataset.topic;
@@ -237,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Trocar Aba (O que faz / Como foi criado / Como contratar)
     detailTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             currentAspect = tab.dataset.aspect;
