@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. AVATAR INTERATIVO BRITOSBOT (TODOS OS SISTEMAS + LINKS NOS 2 SAAS)
+    // 2. AVATAR INTERATIVO BRITOSBOT (TODOS OS SISTEMAS + LINKS OFICIAIS)
     const widget = document.getElementById('avatar-widget');
     const trigger = document.getElementById('avatar-trigger');
     const panel = document.getElementById('avatar-panel');
@@ -88,6 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Implantamos o ambiente exclusivo da sua clínica com perfis de acesso para recepção, médicos e gestão. Acesse o site oficial no botão roxo abaixo ou solicite uma demonstração no WhatsApp!'
             }
         },
+        atosoffice: {
+            siteUrl: 'https://atosoffice.vercel.app/',
+            siteLabel: 'Site Oficial',
+            whatsappMsg: 'Olá Josemar! Vi o AtosOffice no site e gostaria de conhecer melhor para gestão da nossa igreja.',
+            oque: {
+                title: 'AtosOffice — Gestão Inteligente para Igrejas',
+                text: 'Plataforma completa para administração eclesiástica. Integra estrutura hierárquica entre matriz e congregações, cadastro de membros, tesouraria (dízimos e ofertas), agendas pastorais, biblioteca e portal PWA para membros.'
+            },
+            como: {
+                title: 'Arquitetura SaaS do AtosOffice',
+                text: 'Desenvolvido com Next.js, TypeScript, Prisma ORM e PostgreSQL no Supabase, hospedado na Vercel com isolamento multi-tenant, controle hierárquico de permissões e experiência PWA para celular.'
+            },
+            contratar: {
+                title: 'AtosOffice na sua Igreja',
+                text: 'Ativamos o ambiente exclusivo da sua igreja ou ministério em poucos passos, sem necessidade de servidores locais. Acesse o site oficial no botão roxo abaixo ou fale conosco no WhatsApp!'
+            }
+        },
         bcmodas: {
             siteUrl: null,
             whatsappMsg: 'Olá Josemar! Tenho interesse no BCModas ERP para gestão de confecção e produção.',
@@ -102,22 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
             contratar: {
                 title: 'Leve o BCModas para sua Fábrica',
                 text: 'Adaptamos o fluxo de ordens de produção e etapas de fabricação conforme a realidade da sua confecção. Entre em contato pelo WhatsApp!'
-            }
-        },
-        renkgas: {
-            siteUrl: null,
-            whatsappMsg: 'Olá Josemar! Quero saber mais sobre o sistema Renk Gás para distribuidora de água e gás.',
-            oque: {
-                title: 'Renk Gás — Gestão de Vendas & Entregas',
-                text: 'Sistema focado em distribuidoras de gás GLP e água mineral. Agiliza o registro de pedidos recebidos por telefone ou WhatsApp, controla rotas de entregadores e fecha o caixa diário.'
-            },
-            como: {
-                title: 'Como o Renk Gás foi construído',
-                text: 'Desenvolvido com Python, Django e banco de dados PostgreSQL, com interface leve e direta para operação rápida no balcão e integração de pedidos via WhatsApp.'
-            },
-            contratar: {
-                title: 'Organize sua Distribuidora',
-                text: 'Tenha controle total de vasilhames, entregas em andamento e vendas por entregador. Solicite uma apresentação no WhatsApp.'
             }
         },
         bclivros: {
