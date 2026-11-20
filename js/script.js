@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         atosoffice: {
-            siteUrl: 'https://atosoffice.vercel.app/',
+            siteUrl: 'https://https://www.atosoffice.com/',
             siteLabel: 'Site Oficial',
             whatsappMsg: 'Olá Josemar! Vi o AtosOffice no site e gostaria de conhecer melhor para gestão da nossa igreja.',
             oque: {

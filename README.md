@@ -21,7 +21,7 @@ Portal institucional e portfólio oficial da **BritosCode Tecnologia**, desenvol
 | :--- | :--- | :--- | :--- |
 | **MatCom ERP** | SaaS ERP / Varejo & Construção | ERP multi-tenant white-label com PDV, estoque, financeiro (DRE), emissão fiscal SEFAZ/SPED e suporte PWA. | [matcom-britoscode.vercel.app](https://matcom-britoscode.vercel.app/) |
 | **BC Health** | SaaS / Saúde | Gestão clínica multi-tenant com quadro Kanban de atendimento, controle granular de planos, Asaas e WhatsApp. | [clinica-saas-5isy.onrender.com](https://clinica-saas-5isy.onrender.com/) |
-| **AtosOffice** | SaaS / Gestão Eclesiástica | Gestão inteligente para igrejas com hierarquia matriz/congregações, membros, tesouraria, agendas pastorais e PWA. | [atosoffice.vercel.app](https://atosoffice.vercel.app/) |
+| **AtosOffice** | SaaS / Gestão Eclesiástica | Gestão inteligente para igrejas com hierarquia matriz/congregações, membros, tesouraria, agendas pastorais e PWA. | [https://www.atosoffice.com](https://https://www.atosoffice.com/) |
 | **BCModas** | ERP Industrial & E-commerce | Gestão fabril e comercial para confecção e bordados (Python, Django, PostgreSQL, Docker e Oracle Cloud VPS). | Em operação (Privado) |
 | **BC Livros** | Automação & Cloud | Biblioteca digital e engine em Python integrada à Google Drive API para catalogação e ingestão de acervos. | Em operação (Privado) |
 | **Infra & Redes** | Infraestrutura & Observabilidade | Projetos com MikroTik RouterOS, FortiGate, virtualização KVM/Proxmox VE, Docker e monitoramento Zabbix/Grafana. | Consultoria & Implantação |
